@@ -1,0 +1,34 @@
+.btn {
+  background-color: #a5c983;
+  border: none;
+}
+
+.nav-link:hover {
+  cursor: pointer;
+  color: #a5c983;
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0;
+}
+
+.collapse {
+  margin: 0;
+}
+
+.transparent-navbar {
+  background-color: transparent !important;
+  position: absolute;
+  width: 100%;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.transparent-navbar.scrolled {
+  background-color: black !important;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
