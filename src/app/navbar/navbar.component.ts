@@ -9,6 +9,7 @@ import { Component, HostListener } from '@angular/core';
 })
 export class NavbarComponent {
   isScrolled: boolean = false;
+  isSideNavOpen: boolean = false;
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const navbar = document.querySelector('.transparent-navbar') as HTMLElement;
@@ -20,5 +21,13 @@ export class NavbarComponent {
       this.isScrolled = false;
       navbar.classList.remove('scrolled');
     }
+  }
+
+  sideNav() {
+    this.isSideNavOpen = !this.isSideNavOpen;
+  }
+
+  closeSideNav() {
+    this.isSideNavOpen = false;
   }
 }

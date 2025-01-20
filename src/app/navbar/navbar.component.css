@@ -32,3 +32,88 @@
   width: 100%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.transparent-navbar {
+  background-color: rgba(0, 0, 0, 0.8); /* Adjust transparency */
+}
+
+.navbar-nav .nav-item {
+  margin: 0 10px;
+}
+
+.navbar-toggler {
+  margin: 10px;
+  padding: 0;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  .navbar-collapse {
+    flex-direction: column !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    margin-left: 0;
+  }
+}
+
+.sidenav {
+  height: 100%; /* Full-height */
+  width: 0; /* Start with width 0 */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* On top of other elements */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black background color */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* Smooth width transition */
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #5ab1bb;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 5px;
+  right: 50px;
+  font-size: 36px;
+  margin-left: 0px;
+  color: white;
+  background-color: #111;
+  cursor: pointer;
+  border: none;
+}
+
+.sidenav .closebtn:hover {
+  color: #5ab1bb;
+}
+
+.sidenav.active {
+  width: 100%; /* Full width when active */
+}
+
+/* For mobile view */
+@media screen and (max-width: 768px) {
+  .sidenav a {
+    font-size: 20px;
+  }
+}

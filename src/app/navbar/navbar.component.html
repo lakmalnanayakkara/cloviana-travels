@@ -1,9 +1,14 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark transparent-navbar">
+<nav
+  class="navbar navbar-expand-lg navbar-dark transparent-navbar"
+  *ngIf="!isSideNavOpen"
+>
   <div class="container-fluid">
     <!-- Main Row -->
     <div class="row w-100">
       <!-- Left Column -->
-      <div class="col-lg-6 col-md-6 col-sm-12 d-flex align-items-center">
+      <div
+        class="col-lg-6 col-md-12 col-sm-12 d-flex align-items-center justify-content-center"
+      >
         <a class="navbar-brand" routerLink="/">
           <img
             *ngIf="isScrolled"
@@ -25,9 +30,8 @@
         <button
           class="navbar-toggler"
           type="button"
+          (click)="sideNav()"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
@@ -35,7 +39,7 @@
         </button>
       </div>
       <!-- Right Column -->
-      <div class="col-lg-6 col-md-6 col-sm-12 d-flex align-items-center">
+      <div class="col-lg-6 d-flex align-items-center">
         <div class="collapse navbar-collapse" id="navbarNav">
           <div class="row">
             <!-- First Row: Email, Call, and Video Chat -->
@@ -58,7 +62,7 @@
             </div>
             <!-- Second Row: Navbar Links -->
             <div
-              class="col-12 text-end mb-2 d-flex justify-content-end align-items-center gap-2 flex-wrap"
+              class="col-12 text-end mb-2 d-flex justify-content-center align-items-center gap-2 flex-wrap"
             >
               <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
@@ -106,3 +110,13 @@
     </div>
   </div>
 </nav>
+<!-- Side Navbar -->
+<div id="sideNavbar" class="sidenav" [class.active]="isSideNavOpen">
+  <button class="closebtn" (click)="closeSideNav()">&times;</button>
+  <a routerLink="/Home" (click)="closeSideNav()">Home</a>
+  <a routerLink="/AboutUs" (click)="closeSideNav()">About Us</a>
+  <a routerLink="/Destinations" (click)="closeSideNav()">Destinations</a>
+  <a routerLink="/Experiences" (click)="closeSideNav()">Experiences</a>
+  <a routerLink="/Tours" (click)="closeSideNav()">Tours</a>
+  <a routerLink="/Contact" (click)="closeSideNav()">Contact Us</a>
+</div>

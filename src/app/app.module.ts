@@ -11,6 +11,9 @@ import { ExperiencesComponent } from './experiences/experiences.component';
 import { DestinationsComponent } from './destinations/destinations.component';
 import { ToursComponent } from './tours/tours.component';
 import { FooterComponent } from './footer/footer.component';
+import { SidenavComponent } from './navbar/sidenav/sidenav.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MaterialModule } from './shared/material-module';
 
 @NgModule({
   declarations: [
@@ -23,9 +26,10 @@ import { FooterComponent } from './footer/footer.component';
     DestinationsComponent,
     ToursComponent,
     FooterComponent,
+    SidenavComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule, MaterialModule],
+  providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
