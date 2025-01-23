@@ -4,6 +4,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ExperiencesComponent } from './experiences/experiences.component';
+import { ToursComponent } from './tours/tours.component';
+import { TourPageComponent } from './tour-page/tour-page.component';
 const routes: Routes = [
   {
     path: '',
@@ -30,6 +32,17 @@ const routes: Routes = [
     component: ExperiencesComponent,
     data: { title: 'Sri Lanka Tourist Places | Experiences' },
   },
+  {
+    path: 'Tours',
+    component: ToursComponent,
+    data: { title: 'Cloviana Tours | Tours' },
+  },
+  {
+    path: 'Tours/:name',
+    component: TourPageComponent,
+    data: { title: 'Cloviana Tour Page | Tour Page' },
+  },
+
 ];
 
 @NgModule({

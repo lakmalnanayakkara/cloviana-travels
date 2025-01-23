@@ -1,0 +1,160 @@
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 40px; /* Space between columns */
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.text {
+    flex: 1; /* Ensures flexibility */
+    width: 50%; /* Occupies 50% of the container width */
+}
+
+.text .header h1 {
+    font-size: 2.5rem;
+    color: #333; /* Dark text color */
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.text .description p {
+    font-size: 1rem;
+    color: #555; /* Subtle text color */
+    line-height: 1.6; /* Better readability */
+}
+
+.iframe-container {
+    flex: 0 0 30%; /* Flex item that occupies 30% of the width */
+    max-width: 30%; /* Ensures it doesn't exceed 30% of the container width */
+    margin-top: 30px;
+}
+
+.iframe-container iframe {
+    width: 100%; /* Full width of the container */
+    height: 300px; /* Adjust height as needed */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border: 0; /* Removes the default iframe border */
+}
+
+.highlight-box {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border-radius: 8px; /* Rounded corners */
+  }
+
+  .highlight-box p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #333;
+  }
+
+  .separator {
+    margin: 0 20px; /* Increased space between distance and time */
+    color: #333;
+    font-weight: bold;
+  }
+
+
+  /* <-- itinerary--> */
+
+  .itinerary {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+  }
+  
+  .itinerary h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd; /* Decorative line below heading */
+    padding-bottom: 5px;
+  }
+  
+  .itinerary-entry {
+    display: flex;
+    align-items: center; /* Vertically aligns items */
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
+  .day-number {
+    font-size: 1.4rem; /* Larger font size for "Day 1" */
+    font-weight: bold;
+    color: #222;
+    margin-right: 10px;
+  }
+  
+  .separator {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 10px;
+    color: #555;
+  }
+  
+  .details {
+    font-size: 1rem;
+    color: #555;
+    flex: 1; /* Ensures the details text takes up remaining space */
+  }
+  
+
+
+  /* .itinerary */
+
+  .tour-page .itinerary h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.tour-page .itinerary .itinerary-entry {
+  margin-bottom: 10px;
+}
+
+.tour-page .itinerary .itinerary-entry .itinerary-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.tour-page .itinerary .itinerary-entry .itinerary-header .day-number {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.tour-page .itinerary .itinerary-entry .itinerary-header .separator {
+  margin: 0 5px;
+  font-weight: bold;
+}
+
+.tour-page .itinerary .itinerary-entry .itinerary-header .details {
+  flex: 1;
+}
+
+.tour-page .itinerary .itinerary-entry .itinerary-header .expand-icon {
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.tour-page .itinerary .itinerary-entry .expandable-content {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.tour-page .itinerary .itinerary-entry .expandable-content img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tour-page .itinerary .itinerary-entry .expandable-content p {
+  font-size: 14px;
+  color: #666;
+}

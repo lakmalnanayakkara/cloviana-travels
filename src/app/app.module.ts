@@ -14,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SidenavComponent } from './navbar/sidenav/sidenav.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MaterialModule } from './shared/material-module';
+import { TourPageComponent } from './tour-page/tour-page.component';
 
 @NgModule({
   declarations: [
@@ -27,8 +28,15 @@ import { MaterialModule } from './shared/material-module';
     ToursComponent,
     FooterComponent,
     SidenavComponent,
+    TourPageComponent,
+    
   ],
-  imports: [BrowserModule, AppRoutingModule, MaterialModule],
+  imports: [
+     BrowserModule,
+     AppRoutingModule, 
+     MaterialModule,
+     ],
+
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
 })
