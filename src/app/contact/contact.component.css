@@ -1,0 +1,13 @@
+.conditions {
+  color: black;
+}
+
+.btn {
+  background-color: #a5c983;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #5ab1bb;
+  color: white;
+}
