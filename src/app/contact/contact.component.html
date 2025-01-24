@@ -170,7 +170,17 @@
           >Privacy Policy/ Terms and Conditions</a
         ></mat-checkbox
       >
-      <button class="btn mb-3" type="submit">Submit</button>
+      <button
+        class="btn mb-3"
+        type="submit"
+        [disabled]="
+          contactForm.invalid ||
+          contactForm.untouched ||
+          !contactForm.controls.terms.value
+        "
+      >
+        Submit
+      </button>
     </div>
   </form>
 </div>
