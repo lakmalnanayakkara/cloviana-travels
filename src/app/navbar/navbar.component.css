@@ -3,6 +3,10 @@
   border: none;
 }
 
+.btn:hover {
+  background-color: #5ab1bb;
+}
+
 .nav-link:hover {
   cursor: pointer;
   color: #a5c983;

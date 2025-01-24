@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ExperiencesComponent } from './experiences/experiences.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -29,6 +30,11 @@ const routes: Routes = [
     path: 'Experiences',
     component: ExperiencesComponent,
     data: { title: 'Sri Lanka Tourist Places | Experiences' },
+  },
+  {
+    path: 'Privacy-Policy',
+    component: HomeComponent,
+    data: { title: 'Cloviana Travels | Privacy Policy' },
   },
 ];
 
