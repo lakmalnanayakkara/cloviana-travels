@@ -58,6 +58,12 @@ getTourByName(name:string):Tour{
         imageUrl: '/assets/images/galle.jpg',
       },
       // Add more days as needed
+      {
+        day: 3,
+        details: 'Colombo → Galle',
+        description: 'Explore the colonial city of Galle and its historic fort.',
+        imageUrl: '/assets/images/galle.jpg',
+      },
     ],
 
   

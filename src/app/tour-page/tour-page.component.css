@@ -1,9 +1,18 @@
+.tour-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
 .container {
-    display: flex;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  display: flex;
+  flex-wrap: wrap; 
+   /* Allows wrapping on smaller screens */
     gap: 40px; /* Space between columns */
     justify-content: space-between;
     align-items: flex-start;
+    width: 100%;
 }
 
 .text {
@@ -25,8 +34,8 @@
 }
 
 .iframe-container {
-    flex: 0 0 30%; /* Flex item that occupies 30% of the width */
-    max-width: 30%; /* Ensures it doesn't exceed 30% of the container width */
+  flex: 2; /* Flex item that occupies 30% of the width */
+    max-width: 30%;      /* Ensures it doesn't exceed 30% of the container width */
     margin-top: 30px;
 }
 
@@ -61,52 +70,53 @@
 
   /* <-- itinerary--> */
 
-  .itinerary {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    padding: 0;
+   .itinerary {
+  font-family: Arial, sans-serif;
+  width: 80%;
+  margin: 20px auto; 
+  text-align: center;
   }
   
   .itinerary h2 {
-    font-size: 1.8rem;
+    font-size: 2.4rem !important;
     color: #333;
     margin-bottom: 20px;
-    border-bottom: 2px solid #ddd; /* Decorative line below heading */
+    border-bottom: 2px solid #ddd; 
     padding-bottom: 5px;
+    text-align: left;
   }
   
   .itinerary-entry {
     display: flex;
-    align-items: center; /* Vertically aligns items */
-    font-size: 1rem;
+    align-items: center; 
     margin-top: 10px;
   }
   
-  .day-number {
-    font-size: 1.4rem; /* Larger font size for "Day 1" */
+  .itinerary-header .day-number{
+    font-size: 2rem; 
     font-weight: bold;
     color: #222;
     margin-right: 10px;
-  }
+  }  
   
-  .separator {
+  .itinerary-entry .separator {
     font-size: 1.2rem;
     font-weight: bold;
-    margin: 0 10px;
+    margin: 50px 60px;
     color: #555;
-  }
+  } 
   
   .details {
     font-size: 1rem;
     color: #555;
-    flex: 1; /* Ensures the details text takes up remaining space */
+    flex: 1; 
   }
   
 
 
   /* .itinerary */
 
-  .tour-page .itinerary h2 {
+  /* .itinerary h2 {
   font-size: 24px;
   margin-bottom: 15px;
 }
@@ -157,4 +167,13 @@
 .tour-page .itinerary .itinerary-entry .expandable-content p {
   font-size: 14px;
   color: #666;
+} */
+
+/* 
+horizontal-line */
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
 }
