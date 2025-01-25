@@ -38,22 +38,22 @@ export class ContactComponent {
   constructor(private router: Router) {}
 
   onSubmit = async (): Promise<void> => {
-    // emailjs.init(this.key);
-    // const formData = this.contactForm.value;
-    // let response = await emailjs.send(this.serviceId, this.templateId, {
-    //   name: formData.name,
-    //   email: formData.email,
-    //   phone: formData.phone,
-    //   country: formData.country,
-    //   adults: formData.adults,
-    //   kids: formData.kids,
-    //   infants: formData.infants,
-    //   arrival: formData.arrival.toDateString(),
-    //   departure: formData.departure.toDateString(),
-    //   message: formData.message,
-    // });
-    // console.log(response);
-    this.router.navigate(['/confirm']);
+    emailjs.init(this.key);
+    const formData = this.contactForm.value;
+    let response = await emailjs.send(this.serviceId, this.templateId, {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      country: formData.country,
+      adults: formData.adults,
+      kids: formData.kids,
+      infants: formData.infants,
+      arrival: formData.arrival.toDateString(),
+      departure: formData.departure.toDateString(),
+      message: formData.message,
+    });
+    console.log(response);
+    //this.router.navigate(['/confirm']);
     this.contactForm.reset();
   };
 }
