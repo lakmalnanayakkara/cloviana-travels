@@ -74,7 +74,7 @@
     font-family: Arial, sans-serif;
     width: 80%;
     margin: 20px auto; 
-    text-align: center;
+    
   
     }
     
@@ -89,58 +89,80 @@
     
     .itinerary-entry {
       display: flex;
-      align-items: center; 
+    
+      flex-direction: column;
       margin-top: 10px;
       cursor: pointer;
-      width: 100%;
     }
-    .itinerary-header{
-      display: flex;
-      align-items: center;
-      width: 100%;
-      cursor: pointer;
-    }
-    .itinerary-header .details{
-      justify-content: space-between;
-    }
+    .itinerary-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        width: 100%;
+        gap: 10px;
+      }
+ 
   
     .itinerary-header .day-number{
       font-size: 2rem; 
       font-weight: bold;
       color: #222;
-      margin-right: 10px;
+          
     }  
     
-    .itinerary-entry .separator {
+    .itinerary-header .separator {
       font-size: 1.2rem;
       font-weight: bold;
-      margin: 50px 60px;
+      margin: 0 40px;
       color: #555;
     } 
     
-    .details {
-      font-size: 1rem;
-      color: #555; 
-    }
+    .itinerary-header .details{
+        font-size: 1rem;
+        color: #555; 
+        flex-grow: 1;
+        text-align: left;
+      }
     
     .itinerary-header .expand-icon {
-      position: absolute;
-      font-size: 20px;
-      font-weight: bold;
-      right: 30rem;
+        
+        font-size: 20px;
+        font-weight: bold;
+        padding-left:20rem ;
+        align-items: center;
+        display: flex;
     }
   
     .expandable-content {
-      overflow: hidden;
-      max-height: 100px;
-      opacity: 0;
-      transition: max-height 0.3s ease, opacity 0.3s ease;
+        overflow: hidden; /* Ensure smooth height transition */
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-top: none;
     }
-    
-    .expandable-content.ng-animating {
-      max-height: 1000px; /* Adjust to fit content */
-      opacity: 1;
-    }
+    .form-row {
+        display: flex; /* Flexbox for horizontal layout */
+        align-items: flex-start; /* Align items at the top */
+        gap: 20px; /* Space between image and text */
+        margin-top: 20px; /* Space above the row */
+      }
+      
+      .form-row img {
+        width: 300px; /* Set the width of the image */
+        height: auto; /* Keep the aspect ratio */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        flex-shrink: 0; /* Prevent the image from shrinking */
+      }
+      
+      .form-row p {
+        font-size: 1rem;
+        line-height: 1.6; /* Increase line spacing for readability */
+        color: #333; /* Text color */
+        flex: 1; /* Allow the text to take the remaining space */
+      }
+  
   
     /* .itinerary */
   
@@ -205,3 +227,78 @@
     border-top: 1px solid #ccc;
     margin: 20px 0;
   }
+
+  /*========================= Choose Place Start ======================*/
+
+#choose-place {
+    padding: 6rem 0;
+  }
+  .choose-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 2rem;
+  }
+  .lg-img {
+    position: relative;
+    transition: all 0.5s;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .lg-img:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .lg-img:hover {
+    transform: scale(1.02);
+  }
+  .img-content {
+    position: absolute;
+    bottom: 20px;
+    left: 5%;
+  }
+  
+  .img-content h2 {
+    padding: 0 2rem;
+    color: var(--white-color);
+  }
+  
+  .hidden-content {
+    padding: 0.5rem 2rem;
+    color: var(--white-color);
+    transform: translateY(120%);
+    transition: all 0.5s ease-in-out;
+  }
+  .hidden-content i {
+    padding: 0.2rem 0.2rem 0 0;
+  }
+  
+  .lg-img:hover .hidden-content {
+    transform: translateY(0%);
+  }
+  
+  .price-label {
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 0.5rem 1rem;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    transform: rotate(-90deg);
+  }
+  
+  .row-wisw-img {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    padding: 2rem 0;
+  }
+  /*--========================= Choose Place Close ======================-*/
+  

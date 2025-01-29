@@ -1,5 +1,3 @@
-<p>tour-page works!</p>
-
 <div
   id="carouselExampleSlidesOnly"
   class="carousel slide"
@@ -73,7 +71,8 @@
       *ngFor="let day of tour.itinerary; let i = index"
     >
       <!-- Fixed layout for Day and Details -->
-      <div class="itinerary-header" (click)="toggleExpand(i)">
+       <div class="itinerary-raw">
+      <div class="itinerary-header"(click)="toggleExpand(i)">
         <span class="day-number">Day {{ day.day }}</span>
      
         <span class="separator">|</span>
@@ -81,18 +80,74 @@
         <span class="expand-icon">
           {{ expandedIndex === i ? '-' : '+' }}
         </span>
-      
-      </div>
-
+    </div>
+    <hr>
+     
       <!-- Expandable Content -->
+       <div class="itinerary-expand">
       <div class="expandable-content" *ngIf="expandedIndex === i">
     
-        <p>{{ day.description }}expand sectiona monfwo nefonwof nofnqoenr anfonef</p>
+        <form>
+            <div class="form-row">
+              <p>At the airport you will be greeted by our Jetwing Representative and your chauffeur guide who will take you to the beach resort town of Negombo. Rest and recoup from any jet lag. Negombo is a buzzing hub of contrasts and cultures. If you feel like exploring, your chauffeur guide will show you around some of the most interesting sights and landmarks and perhaps take a boat ride along the Dutch canal. Or, you can relax on the most famous golden sands of Negombo beach.</p>
+              <img src="day-01.jpg" alt="">
+            </div>
+          </form>
+         
+          </div>
+        </div>
       </div>
     </div>
     
   </div>
 
+<!--============== Choose Your Place Start ===============-->
 
+    <div class="choose-place container">
+      <p class="heading-normal-txt">CHOOSE YOUR PLACE</p>
+      <h2 class="headings">POPULAR <span>TOURS</span></h2>
+      <div class="choose-wrapper">
+        <div class="img-left-side">
+          <div class="lg-img">
+            <img src="Tea-Plantations.jpg" alt="">
+            <div class="img-content">
+              <h2>YALA Tours</h2>
+            </div>
+          </div>
+        </div>
+        <div class="img-right-side">
+          <div class="lg-img">
+            <img src="Kandy.jpg" alt="">
+            <div class="img-content">
+              <h2>GALLE Tours</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--row wise images-->
+      <div class="row-wisw-img">
+        <div class="lg-img">
+          <img src="fish.jpg" alt="">
+          <div class="img-content">
+            <h2>France Tours</h2>
+          </div>
+        </div>
+        <div class="lg-img">
+          <img src="Kitulgala-3.jpg" alt="">
+          <div class="img-content">
+            <h2>Grees Tours</h2>
+          </div>
+        </div>
+        <div class="lg-img">
+          <img src="sigiriya1.jpg" alt="">
+          <div class="img-content">
+            <h2>Canada Tours</h2>
+          </div>
+        </div>
+      </div>
+
+
+
+  <!--============== Choose Your Place Close ===============-->
 
 </div>
