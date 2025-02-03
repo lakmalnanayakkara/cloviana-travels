@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { GlobalConstant } from '../shared/global-constant';
 import emailjs from '@emailjs/browser';
@@ -8,9 +8,9 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-contact',
   standalone: false,
-
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css',
+  encapsulation: ViewEncapsulation.None,
 })
 export class ContactComponent {
   key = environment.EMAILJS_KEY;
