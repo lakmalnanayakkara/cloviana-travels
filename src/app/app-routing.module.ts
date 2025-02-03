@@ -6,7 +6,6 @@ import { ContactComponent } from './contact/contact.component';
 import { ExperiencesComponent } from './experiences/experiences.component';
 import { ToursComponent } from './tours/tours.component';
 import { TourPageComponent } from './tour-page/tour-page.component';
-
 const routes: Routes = [
   {
     path: '',
