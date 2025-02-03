@@ -14,6 +14,9 @@ import { FooterComponent } from './footer/footer.component';
 import { SidenavComponent } from './navbar/sidenav/sidenav.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MaterialModule } from './shared/material-module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 import { TourPageComponent } from './tour-page/tour-page.component';
 
 @NgModule({
@@ -29,14 +32,17 @@ import { TourPageComponent } from './tour-page/tour-page.component';
     FooterComponent,
     SidenavComponent,
     TourPageComponent,
-    
   ],
   imports: [
-     BrowserModule,
-     AppRoutingModule, 
-     MaterialModule,
-     ],
-
+    BrowserModule,
+    AppRoutingModule,
+    MaterialModule,
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    FormsModule,
+  ],
+  exports: [ReactiveFormsModule],
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
 })

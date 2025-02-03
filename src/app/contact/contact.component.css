@@ -1,0 +1,23 @@
+.conditions {
+  color: black;
+}
+
+.btn {
+  background-color: #a5c983;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #5ab1bb;
+  color: white;
+}
+
+.mat-mdc-text-field-wrapper.mdc-text-field--filled:not(
+    .mdc-text-field--disabled
+  ) {
+  background-color: transparent !important;
+}
+
+.mat-mdc-form-field-focus-overlay {
+  background-color: transparent !important;
+}

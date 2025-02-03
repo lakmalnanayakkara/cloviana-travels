@@ -33,6 +33,11 @@ const routes: Routes = [
     data: { title: 'Sri Lanka Tourist Places | Experiences' },
   },
   {
+    path: 'Privacy-Policy',
+    component: HomeComponent,
+    data: { title: 'Cloviana Travels | Privacy Policy' },
+  },
+  {
     path: 'Tours',
     component: ToursComponent,
     data: { title: 'Cloviana Tours | Tours' },
@@ -42,7 +47,6 @@ const routes: Routes = [
     component: TourPageComponent,
     data: { title: 'Cloviana Tour Page | Tour Page' },
   },
-
 ];
 
 @NgModule({

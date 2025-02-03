@@ -3,6 +3,10 @@
   border: none;
 }
 
+.btn:hover {
+  background-color: #5ab1bb;
+}
+
 .nav-link:hover {
   cursor: pointer;
   color: #a5c983;
@@ -18,7 +22,7 @@
 }
 
 .transparent-navbar {
-  background-color: transparent !important;
+  background-color: rgba(74 71 71 / 80%);
   position: absolute;
   width: 100%;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -31,10 +35,6 @@
   top: 0;
   width: 100%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.transparent-navbar {
-  background-color: rgba(0, 0, 0, 0.8); /* Adjust transparency */
 }
 
 .navbar-nav .nav-item {
