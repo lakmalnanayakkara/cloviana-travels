@@ -23,6 +23,8 @@
   align-items: center;
   justify-content: center;
   background-color: #a5c983;
+  text-align: justify;
+  text-justify: inter-word;
 }
 .equal-box img {
   width: 100%;
@@ -33,6 +35,8 @@
 .equal-box-2 {
   flex: 1;
   background-color: #5ab1bb;
+  text-align: justify;
+  text-justify: inter-word;
 }
 .equal-box-2 img {
   object-fit: cover;

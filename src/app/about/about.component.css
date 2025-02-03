@@ -1,0 +1,12 @@
+.custom-justify {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.about-section {
+  background-image: url("../../assets/about/Logo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 50px;
+}
