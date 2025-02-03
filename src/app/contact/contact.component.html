@@ -78,6 +78,7 @@
             type="number"
             placeholder=""
             formControlName="adults"
+            min="0"
             required
           />
           <mat-error *ngIf="contactForm.controls.country.hasError('required')"
@@ -91,8 +92,9 @@
           <input
             matInput
             type="number"
-            placeholder="Sri Lanka"
+            placeholder=""
             formControlName="kids"
+            min="0"
             required
           />
           <mat-error *ngIf="contactForm.controls.country.hasError('required')"
@@ -106,8 +108,9 @@
           <input
             matInput
             type="number"
-            placeholder="Sri Lanka"
+            placeholder=""
             formControlName="infants"
+            min="0"
             required
           />
           <mat-error *ngIf="contactForm.controls.country.hasError('required')"
