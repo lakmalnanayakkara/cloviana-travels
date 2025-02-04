@@ -10,7 +10,8 @@ import type { Tour } from '../../shared/models/tours';
 })
 export class TourPackageComponent {
   @Input() tour: Tour;
-  ngOnInit() {
-    console.log(this.tour);
+
+  getFormattedTourName(name: string): string {
+    return name.replace(/\s+/g, '-');
   }
 }
