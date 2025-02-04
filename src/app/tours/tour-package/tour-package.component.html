@@ -1,0 +1,10 @@
+<div
+  class="tour-package mt-2"
+  [ngStyle]="{ 'background-image': 'url(' + tour.imageUrl + ')' }"
+>
+  <div class="tour-content">
+    <h1>{{ tour.name.toUpperCase() }}</h1>
+    <h3>({{ tour.duration }})</h3>
+    <h4>From $ {{ tour.price }}.00</h4>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+.tour-package {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.tour-content {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 300px;
+  padding: 20px;
+  text-align: end;
+}
+
+.tour-content:hover {
+  background: rgba(112, 169, 176, 0.8);
+}
