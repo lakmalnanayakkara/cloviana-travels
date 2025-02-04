@@ -18,6 +18,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { TourPageComponent } from './tour-page/tour-page.component';
+import { TourPackageComponent } from './tours/tour-package/tour-package.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { TourPageComponent } from './tour-page/tour-page.component';
     FooterComponent,
     SidenavComponent,
     TourPageComponent,
+    TourPackageComponent,
   ],
   imports: [
     BrowserModule,
