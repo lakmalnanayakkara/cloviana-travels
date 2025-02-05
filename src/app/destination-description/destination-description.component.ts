@@ -6,24 +6,25 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-destination-description',
   standalone: false,
-  
+
   templateUrl: './destination-description.component.html',
-  styleUrl: './destination-description.component.css'
+  styleUrl: './destination-description.component.css',
 })
 export class DestinationDescriptionComponent implements OnInit {
-
-  destinations!:Destination;
-  constructor(private destinationsService:DestinationsService, private activatedRoute:ActivatedRoute){
-
-    this.activatedRoute.params.subscribe((params)=>{
-      if(params.name)
-        this.destinations = destinationsService.getDestinationByName(params.name);
-    }
-  )
+  destination!: Destination;
+  constructor(
+    private destinationsService: DestinationsService,
+    private activatedRoute: ActivatedRoute
+  ) {
+    this.activatedRoute.params.subscribe((params) => {
+      if (params.name)
+        this.destination = this.destinationsService.getDestinationByName(
+          params.name
+        );
+    });
   }
- 
-  ngOnInit(): void {
-    console.log(this.destinations);
-   }
 
+  ngOnInit(): void {
+    console.log(this.destination.blog);
+  }
 }
