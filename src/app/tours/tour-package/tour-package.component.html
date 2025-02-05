@@ -1,6 +1,7 @@
 <div
   class="tour-package mt-2"
   [ngStyle]="{ 'background-image': 'url(' + tour.imageUrl + ')' }"
+  [routerLink]="'/Tours/' + getFormattedTourName(tour.name)"
 >
   <div class="tour-content">
     <h1>{{ tour.name.toUpperCase() }}</h1>

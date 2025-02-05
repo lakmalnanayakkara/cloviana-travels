@@ -67,41 +67,58 @@
               <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                   <a
-                    class="nav-link active"
+                    class="nav-link"
                     aria-current="page"
                     routerLink="/Home"
+                    routerLinkActive="active-link"
+                    [routerLinkActiveOptions]="{ exact: true }"
                     >Home</a
                   >
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item">
                   <a
-                    class="nav-link dropdown-toggle"
-                    id="navbarDropdown"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
+                    class="nav-link"
                     routerLink="/About"
+                    routerLinkActive="active-link"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                    >About Us</a
                   >
-                    About Us
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Our Story</a></li>
-                    <li><a class="dropdown-item" href="#">Our Team</a></li>
-                  </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" routerLink="/Destinations"
+                  <a
+                    class="nav-link"
+                    routerLink="/Destinations"
+                    routerLinkActive="active-link"
+                    [routerLinkActiveOptions]="{ exact: true }"
                     >Destinations</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" routerLink="/Experiences">Experiences</a>
+                  <a
+                    class="nav-link"
+                    routerLink="/Experiences"
+                    routerLinkActive="active-link"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                    >Experiences</a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" routerLink="/Tours">Tours</a>
+                  <a
+                    class="nav-link"
+                    routerLink="/Tours"
+                    routerLinkActive="active-link"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                    >Tours</a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" routerLink="/Contact">Contact Us</a>
+                  <a
+                    class="nav-link"
+                    routerLink="/Contact"
+                    routerLinkActive="active-link"
+                    [routerLinkActiveOptions]="{ exact: true }"
+                    >Contact Us</a
+                  >
                 </li>
               </ul>
             </div>
