@@ -1,8 +1,4 @@
-<div
-  id="carouselExampleSlidesOnly"
-  class="carousel slide"
-  data-bs-ride="carousel"
->
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="../../assets/home/ella-bridge.jpg" class="d-block w-100" alt="..." />
@@ -10,26 +6,29 @@
   </div>
 </div>
 
-
-
-<section id="blog-container">
-<div class="blogs blogpost">
-    <div class="post">
-      <ul><li *ngFor="let post of destinations.blog">
-        <!-- <img src="Dambulla-Cave-Temple.jpg" alt="">
-        <h3>Learn web developmentin the easiest way</h3>
-        <p>Lorem is hur kjnjrf dolar jknnerf nune oioe nenfo nueuf nuuef uenbf ue njeh ujw njwij joijopl[pwe mpdf ]qwmnoi qwpopqw pomwe pompowe oinqnre oiqwe[  eqdpdnpin  qimid ]
-       <br><br>
-       this aimf imojoiof inionf nouer noer onererl [ll[lef mpe]]m mpokpef pkokef rijfr rfl[prf[ pookr[ook poporkf-jr0ig pmrmfirjggj onuropkop,]]] Lorem is hur kjnjrf dolar jknnerf nune oioe nenfo nueuf nuuef uenbf ue njeh ujw njwij joijopl[pwe mpdf ]qwmnoi qwpopqw pomwe pompowe oinqnr</p> -->
-    <img src="{{post.imageUrl}}" alt="">
-    <div class="header">
-      <h3>{{post.header}}</h3>
-    </div>
-    <div class="description">
-      <p>{{post.description}}</p>
-    </div>
-  </li></ul>
-    <button routerLink="/Destinations" mat-button class="green-btn">Back</button>
-  </div>
+<div *ngFor="let post of destinations.blog ">
+ <h2>{{post.headerr}}</h2> 
 </div>
-</section>
+
+<!-- 
+<section id="blog-container" >
+  <div class="blogs blogpost">
+    <div class="post" >
+
+    <div class="single-blog" *ngFor="let post of destinations.blog">
+      
+       
+          
+          <img src="{{post.imageUrl}}" alt="">
+          <div class="header">
+            <h3>{{post.headerr}}</h3>
+          </div>
+          <div class="description">
+            <p>{{post.description}}</p>
+          </div>
+      
+      </div>
+      <button routerLink="/Destinations" mat-button class="green-btn">Back</button>
+    </div>
+  </div>
+</section> -->

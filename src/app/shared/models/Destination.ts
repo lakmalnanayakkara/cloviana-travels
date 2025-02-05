@@ -7,6 +7,6 @@ export class Destination{
     imageUrl!:string;
     stars:number=0;
     iframe?:string;
-    blog?:{header:string; description:string;imageUrl:string;}[];
+    blog:{headerr:string; description:string;imageUrl:string;}[];
 
 }

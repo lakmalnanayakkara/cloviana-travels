@@ -22,6 +22,8 @@ export class DestinationDescriptionComponent implements OnInit {
   )
   }
  
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    console.log(this.destinations);
+   }
 
 }

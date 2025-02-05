@@ -9,7 +9,7 @@ export class DestinationsService {
   constructor() { }
 
   getDestinationByName(header:string):Destination{
-    return this.getAll().find(destination=> destination.header==header)!;
+    return this.getAll().find(destination=> destination.header===header)!;
   }
   getAll():Destination[] {
 return[
@@ -26,9 +26,9 @@ return[
     ],
     blog: [
       {
-        header: 'Anuradhapura',
+        headerr: 'Anuradhapura',
         description: 'Start your journey with a scenic drive from the airport to Colombo.',
-        imageUrl: 'Jetavanaramaya.jpg',
+        imageUrl: '../../../assets/destinations/Dambulla-Cave-Temple.jpg',
       }
     ],
   },
@@ -45,7 +45,7 @@ return[
     ],
     blog: [
       {
-        header: 'Airport → Colombo',
+        headerr: 'Airport → Colombo',
         description: 'Start your journey with a scenic drive from the airport to Colombo.',
         imageUrl: '/assets/images/colombo.jpg',
       }
@@ -64,7 +64,7 @@ return[
     ],
     blog: [
       {
-        header: 'Airport → Colombo',
+        headerr: 'Airport → Colombo',
         description: 'Start your journey with a scenic drive from the airport to Colombo.',
         imageUrl: '/assets/images/colombo.jpg',
       }
@@ -83,7 +83,7 @@ return[
     ],
     blog: [
       {
-        header: 'Airport → Colombo',
+        headerr: 'Airport → Colombo',
         description: 'Start your journey with a scenic drive from the airport to Colombo.',
         imageUrl: '/assets/images/colombo.jpg',
       }
