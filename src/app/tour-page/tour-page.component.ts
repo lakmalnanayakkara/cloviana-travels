@@ -11,7 +11,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   templateUrl: './tour-page.component.html',
   styleUrl: './tour-page.component.css',
 })
-export class TourPageComponent implements OnInit {
+export class TourPageComponent {
   tour!: Tour;
   expandedIndex: number | null = null;
   safeIframeUrl: SafeResourceUrl;
@@ -30,10 +30,6 @@ export class TourPageComponent implements OnInit {
     this.safeIframeUrl = this.sanitizer.bypassSecurityTrustResourceUrl(
       this.tour.iframe
     );
-  }
-
-  ngOnInit(): void {
-    console.log(this.tour);
   }
 
   toggleExpand(index: number): void {
