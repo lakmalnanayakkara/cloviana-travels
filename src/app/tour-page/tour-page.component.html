@@ -25,29 +25,109 @@
         essentially unchanged.
       </p>
     </div>
-    <h1>INCLUSIONS</h1>
-    <div class="d-flex flex-row">
-      <div class="d-flex flex-column align-items-center">
-        <img src="../../assets/tours/sub/Meals.png" class="w-100" />
-        <p>Meals</p>
-      </div>
-      <div class="d-flex flex-column align-items-center">
-        <img src="../../assets/tours/sub/Transportation.png" class="w-100" />
-        <p>Transport</p>
-      </div>
-      <div class="d-flex flex-column align-items-center">
-        <img src="../../assets/tours/sub/Accommodation.png" class="w-100" />
-        <p>Accommodation</p>
-      </div>
-      <div class="d-flex flex-column align-items-center">
-        <img src="../../assets/tours/sub/Activities.png" class="w-100" />
-        <p class="">Activities</p>
+  </div> 
+
+</div>
+<div class="iframe-container">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d2029644.1943509448!2d79.20118065242973!3d6.502837818003945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x3ae253d10f7a7003%3A0x320b2e4d32d3838d!2sColombo!3m2!1d6.9270786!2d79.861243!4m5!1s0x3ae465955bc09a25%3A0xbdfadcdadec487fb!2sElla!3m2!1d6.8666988!2d81.046553!5e0!3m2!1sen!2slk!4v1737540226274!5m2!1sen!2slk'" frameborder="0"></iframe>
+  <!-- <iframe [src]='tour.iframe'
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade" frameborder="0">
+</iframe> -->
+<div class="highlight-box">
+  <p><strong>Distance:</strong> 200 km <span class="separator"></span> <strong>Time:</strong> 3 hours</p>
+</div>
+</div>
+
+
+  <!-- Itinerary Section -->
+  <div class="itinerary">
+    <h2>Itinerary</h2>
+    <div
+      class="itinerary-entry"
+      *ngFor="let day of tour.itinerary; let i = index"
+    >
+      <!-- Fixed layout for Day and Details -->
+       <div class="itinerary-raw">
+      <div class="itinerary-header"(click)="toggleExpand(i)">
+        <span class="day-number">Day {{ day.day }}</span>
+     
+        <span class="separator">|</span>
+        <span class="details">{{ day.details }}</span>
+        <span class="expand-icon">
+          {{ expandedIndex === i ? '-' : '+' }}
+        </span>
+    </div>
+    <hr>
+     
+      <!-- Expandable Content -->
+       <div class="itinerary-expand">
+      <div class="expandable-content" *ngIf="expandedIndex === i">
+    
+        <form>
+            <div class="form-row">
+              <p>At the airport you will be greeted by our Jetwing Representative and your chauffeur guide who will take you to the beach resort town of Negombo. Rest and recoup from any jet lag. Negombo is a buzzing hub of contrasts and cultures. If you feel like exploring, your chauffeur guide will show you around some of the most interesting sights and landmarks and perhaps take a boat ride along the Dutch canal. Or, you can relax on the most famous golden sands of Negombo beach.</p>
+              <img src="day-01.jpg" alt="">
+            </div>
+          </form>
+         
+          </div>
+        </div>
       </div>
     </div>
+    
   </div>
-  <div class="col-md-6 d-flex">
-    <iframe [src]="safeIframeUrl" class="w-100 h-100 ps-5"></iframe>
-  </div>
+
+<!--============== Choose Your Place Start ===============-->
+
+    <div class="choose-place container">
+      <p class="heading-normal-txt">CHOOSE YOUR PLACE</p>
+      <h2 class="headings">POPULAR <span>TOURS</span></h2>
+      <div class="choose-wrapper">
+        <div class="img-left-side">
+          <div class="lg-img">
+            <img src="Tea-Plantations.jpg" alt="">
+            <div class="img-content">
+              <h2>YALA Tours</h2>
+            </div>
+          </div>
+        </div>
+        <div class="img-right-side">
+          <div class="lg-img">
+            <img src="Kandy.jpg" alt="">
+            <div class="img-content">
+              <h2>GALLE Tours</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--row wise images-->
+      <div class="row-wisw-img">
+        <div class="lg-img">
+          <img src="fish.jpg" alt="">
+          <div class="img-content">
+            <h2>France Tours</h2>
+          </div>
+        </div>
+        <div class="lg-img">
+          <img src="Kitulgala-3.jpg" alt="">
+          <div class="img-content">
+            <h2>Grees Tours</h2>
+          </div>
+        </div>
+        <div class="lg-img">
+          <img src="sigiriya1.jpg" alt="">
+          <div class="img-content">
+            <h2>Canada Tours</h2>
+          </div>
+        </div>
+      </div>
+
+
+
+  <!--============== Choose Your Place Close ===============-->
+
 </div>
 <div
   class="container d-flex flex-column mt-5"
