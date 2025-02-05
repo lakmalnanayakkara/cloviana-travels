@@ -19,6 +19,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { TourPageComponent } from './tour-page/tour-page.component';
 import { TourPackageComponent } from './tours/tour-package/tour-package.component';
+import { DestinationDescriptionComponent } from './destination-description/destination-description.component';
 
 @NgModule({
   declarations: [
