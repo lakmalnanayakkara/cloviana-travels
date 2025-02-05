@@ -108,7 +108,7 @@ export class ToursService {
         name: 'full cover sri lanka',
         duration: '14 Days/ 13 Nights',
         price: 800,
-        imageUrl: '../../../assets/tours/tour-image-1.jpg',
+        imageUrl: '../../../assets/tours/tour-image-6.jpg',
         description:
           'Sri Lanka’s most renowned architect Geoffrey Bawa redefined and influenced South-East Asian',
         iframe:

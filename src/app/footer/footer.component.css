@@ -22,3 +22,31 @@ footer .btn-outline-light:hover {
   background: #f8f9fa;
   color: #212529;
 }
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: #5ab1bb;
+}
+
+.social-icon .material-icons {
+  font-size: 24px;
+  color: white;
+}
+
+.social-icon:hover {
+  background-color: white;
+  color: #000;
+}
+
+.social-icon:hover .material-icons {
+  color: black;
+}
