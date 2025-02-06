@@ -9,13 +9,12 @@ import { Component, HostListener, type OnInit } from '@angular/core';
 })
 export class NavbarComponent {
   isSideNavOpen: boolean = false;
-  isMobile: boolean;
-
+  isMobile: boolean = window.innerWidth < 768;
   constructor() {}
 
   @HostListener('window:resize', ['$event'])
   onResize() {
-    this.isMobile = window.innerWidth < 768 ? true : false;
+    this.isMobile = window.innerWidth < 768;
   }
 
   sideNav() {
