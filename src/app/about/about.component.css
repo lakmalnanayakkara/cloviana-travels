@@ -13,6 +13,8 @@
 
 .about-subtitle {
   font-family: "Playball", cursive;
+  display: flex;
+  text-align: center;
 }
 
 p {

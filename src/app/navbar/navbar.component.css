@@ -17,10 +17,6 @@
   padding: 0;
 }
 
-.collapse {
-  margin: 0;
-}
-
 .transparent-navbar {
   background-color: rgba(74 71 71 / 80%);
   position: absolute;
@@ -41,15 +37,6 @@
   margin: 0 10px;
 }
 
-.navbar-toggler {
-  margin: 10px;
-  padding: 0;
-}
-
-.navbar-toggler:focus {
-  box-shadow: none;
-}
-
 @media (max-width: 768px) {
   .navbar-collapse {
     flex-direction: column !important;
@@ -62,16 +49,20 @@
   }
 }
 
+.side-btn button mat-icon {
+  color: #fff;
+}
+
 .sidenav {
-  height: 100%; /* Full-height */
-  width: 0; /* Start with width 0 */
-  position: fixed; /* Stay in place */
-  z-index: 1000; /* On top of other elements */
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
   top: 0;
   left: 0;
-  background-color: #111; /* Black background color */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  transition: 0.5s; /* Smooth width transition */
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
   display: flex;
   flex-direction: column;
   padding-top: 60px;

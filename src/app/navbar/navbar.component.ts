@@ -8,19 +8,20 @@ import { Component, HostListener } from '@angular/core';
   styleUrl: './navbar.component.css',
 })
 export class NavbarComponent {
-  isScrolled: boolean = false;
   isSideNavOpen: boolean = false;
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    const navbar = document.querySelector('.transparent-navbar') as HTMLElement;
+  isMobile: boolean = false;
 
-    if (window.scrollY > 50) {
-      this.isScrolled = true;
-      navbar.classList.add('scrolled');
-    } else {
-      this.isScrolled = false;
-      navbar.classList.remove('scrolled');
-    }
+  constructor() {
+    this.checkWindowSize();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.checkWindowSize();
+  }
+
+  checkWindowSize() {
+    this.isMobile = window.innerWidth < 768;
   }
 
   sideNav() {
