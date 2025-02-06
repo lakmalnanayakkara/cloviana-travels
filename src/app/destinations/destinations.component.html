@@ -5,71 +5,80 @@
 >
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="experience.jpg" class="d-block w-100" alt="..." />
+      <img
+        src="../../assets/destinations/colombo-cover-1600x900.webp"
+        class="d-block w-100"
+        alt="..."
+      />
     </div>
   </div>
 </div>
 
+<!-- hero -->
+<section id="about-home">
+  <h2>Blog</h2>
+  <p>
+    With myriad places to visit, Sri Lanka is a little paradise isle full of
+    surprising variety. You can swap the chaos of a city for a tranquil beach in
+    an hour or less, or switch from tropical heat to cool heights and cloud
+    forests for a few more. There are mountains to climb, waves to surf, whales
+    to watch, history to revisit, jungles to explore, even elephants to meet.
+    The destinations in Sri Lanka are wide and varied and we’ll gladly share
+    them with you in the very best way.
+  </p>
+</section>
 
+<section id="blog-container">
+  <div class="blogs">
+    <div class="post">
+      <ul>
+        <li *ngFor="let destination of destinations">
+          <img src="{{ destination.imageUrl }}" alt="" />
+          <div class="post_header">
+            <h3>
+              {{ destination.header }}
+            </h3>
+          </div>
+          <div class="post_description">
+            <p>{{ destination.description }}</p>
+          </div>
 
+          <button
+            routerLink="/Destinations/{{ destination.header }}"
+            mat-button
+            class="green-btn"
+          >
+            Click Me
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
 
+  <div class="cate">
+    <h2>Categories</h2>
+    <hr />
+    <a href="#" style="color: #a5c983">Western Province</a>
+    <hr />
+    <a href="#" style="color: #5ab1bb">Southern Province</a>
+    <hr />
+    <a href="#" style="color: #a5c983">Central Province</a>
+    <hr />
+    <a href="#" style="color: #5ab1bb">North-Western Province</a>
+    <hr />
+    <a href="#" style="color: #a5c983">Sabaragamuwa Province</a>
+    <hr />
+    <a href="#" style="color: #5ab1bb">Northern Province</a>
+    <hr />
+  </div>
+</section>
 
+<!-- blog container -->
 
+<!-- footer -->
 
-        
-        <!-- hero -->
-        <section id="about-home">
-            <h2>Blog</h2>
-            <p>With myriad places to visit, Sri Lanka is a little paradise isle full of surprising variety. You can swap the chaos of a city for a tranquil beach in an hour or less, or switch from tropical heat to cool heights and cloud forests for a few more. There are mountains to climb, waves to surf, whales to watch, history to revisit, jungles to explore, even elephants to meet. The destinations in Sri Lanka are wide and varied and we’ll gladly share them with you in the very best way.</p>
-        </section>
+<!-- <script>
 
-        <section id="blog-container">
-            <div class="blogs">
-                <div class="post">
-                    
-                    
-                    <ul><li *ngFor="let destination of destinations">
-                        <img src="{{destination.imageUrl}}" alt="">
-                        <div class="post_header"><h3>
-                            {{destination.header}}
-                        </h3></div>
-                        <div class="post_description">
-                            <p>{{destination.description}}</p>
-                        </div>
-                    
-                            <button routerLink="/Destinations/{{destination.header}}" mat-button class="green-btn">Click Me</button>
-                        
-                    </li></ul>
-                </div>
-             
-     
-              
-            </div>
-
-            <div class="cate">
-                <h2>Categories</h2>
-                <hr>
-                <a href="#" style="color: #a5c983;">Western Province</a>
-                <hr>
-                <a href="#" style="color:#5ab1bb;">Southern Province</a>
-                <hr>
-                <a href="#" style="color: #a5c983;">Central Province</a>
-                <hr>
-                <a href="#"  style="color:#5ab1bb;">North-Western Province</a>
-                <hr>
-                <a href="#"  style="color: #a5c983;">Sabaragamuwa Province</a>
-                <hr>
-                <a href="#"  style="color:#5ab1bb;">Northern Province</a>
-                <hr>
-            </div>
-        </section>
-      
-        <!-- blog container -->
-
-        <!-- footer -->
-       
-        <!-- <script>
- 
 
 // Navaigation Bar
 $('#menu-btn').click(function(){
@@ -80,7 +89,3 @@ $('#menu-close').click(function(){
 });
 
         </script> -->
-
-
-    
-

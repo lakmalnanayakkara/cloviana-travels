@@ -31,6 +31,7 @@ import { CommonModule } from '@angular/common';
     ContactComponent,
     ExperiencesComponent,
     DestinationsComponent,
+    DestinationDescriptionComponent,
     ToursComponent,
     FooterComponent,
     SidenavComponent,
@@ -45,7 +46,7 @@ import { CommonModule } from '@angular/common';
     MatDatepickerModule,
     MatNativeDateModule,
     FormsModule,
-    CommonModule
+    CommonModule,
   ],
   exports: [ReactiveFormsModule],
   providers: [provideAnimationsAsync()],

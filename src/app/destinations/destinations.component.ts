@@ -5,17 +5,14 @@ import { DestinationsService } from '../services/destinations/destinations.servi
 @Component({
   selector: 'app-destinations',
   standalone: false,
-  
+
   templateUrl: './destinations.component.html',
-  styleUrl: './destinations.component.css'
+  styleUrl: './destinations.component.css',
 })
 export class DestinationsComponent implements OnInit {
-
-  destinations:Destination[]=[];
-  constructor(private destinationsService:DestinationsService){}
+  destinations: Destination[] = [];
+  constructor(private destinationsService: DestinationsService) {}
   ngOnInit(): void {
     this.destinations = this.destinationsService.getAll();
   }
-  
-
 }
