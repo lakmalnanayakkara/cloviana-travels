@@ -62,10 +62,10 @@
   font-weight: bolder;
 }
 
-.home-title p {
+.home-desc p {
   font-family: "Arimo", sans-serif;
   color: #777;
-  font-weight: normal;
+  text-align: center;
 }
 
 .home-subtitle {
