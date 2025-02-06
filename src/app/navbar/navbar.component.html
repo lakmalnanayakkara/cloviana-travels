@@ -1,25 +1,11 @@
-<nav
-  class="navbar navbar-expand-lg navbar-dark transparent-navbar"
-  *ngIf="!isSideNavOpen"
->
+<nav class="navbar navbar-dark transparent-navbar" *ngIf="!isSideNavOpen">
   <div class="container-fluid">
-    <!-- Main Row -->
-    <div class="row w-100">
-      <!-- Left Column -->
+    <div class="d-flex flex-row w-100">
       <div
-        class="col-lg-6 col-md-12 col-sm-12 d-flex align-items-center justify-content-center"
+        class="d-flex col-md-4 col-10 align-items-center justify-content-center"
       >
         <a class="navbar-brand" routerLink="/">
           <img
-            *ngIf="isScrolled"
-            src="../../assets/Landscape_White.png"
-            alt="Logo"
-            width="250"
-            height="130"
-            class="d-inline-block align-text-top"
-          />
-          <img
-            *ngIf="!isScrolled"
             src="../../assets/Landscape_White.png"
             alt="Logo"
             width="250"
@@ -27,108 +13,99 @@
             class="d-inline-block align-text-top"
           />
         </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          (click)="sideNav()"
-          data-bs-toggle="collapse"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
       </div>
-      <!-- Right Column -->
-      <div class="col-lg-6 d-flex align-items-center">
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <div class="row">
-            <!-- First Row: Email, Call, and Video Chat -->
-            <div
-              class="col-12 text-end mb-2 d-flex justify-content-end align-items-center gap-3 flex-wrap"
+      <div
+        class="d-flex flex-column col-md-8 justify-content-center"
+        *ngIf="!isMobile"
+      >
+        <div class="d-flex flex-row justify-content-end pe-3">
+          <div class="d-flex gap-3 align-items-center">
+            <a
+              href="mailto:example@example.com"
+              class="text-light text-decoration-none"
             >
-              <a
-                href="mailto:example@example.com"
-                class="text-light text-decoration-none"
-              >
-                <i class="fas fa-envelope"></i>
-                Email: clovianatravels&#64;gmail.com |
-              </a>
-              <a href="tel:+1234567890" class="text-light text-decoration-none">
-                <i class="fas fa-phone-alt"></i> Call Us |
-              </a>
-              <a class="btn btn-danger" routerLink="#" role="button"
-                >Video Chat</a
-              >
-            </div>
-            <!-- Second Row: Navbar Links -->
-            <div
-              class="col-12 text-end mb-2 d-flex justify-content-center align-items-center gap-2 flex-wrap"
+              <i class="fas fa-envelope"></i>
+              Email: clovianatravels&#64;gmail.com |
+            </a>
+            <a href="tel:+1234567890" class="text-light text-decoration-none">
+              <i class="fas fa-phone-alt"></i> Call Us |
+            </a>
+            <a class="btn btn-danger" routerLink="#" role="button"
+              >Video Chat</a
             >
-              <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    aria-current="page"
-                    routerLink="/Home"
-                    routerLinkActive="active-link"
-                    [routerLinkActiveOptions]="{ exact: true }"
-                    >Home</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    routerLink="/About"
-                    routerLinkActive="active-link"
-                    [routerLinkActiveOptions]="{ exact: true }"
-                    >About Us</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    routerLink="/Destinations"
-                    routerLinkActive="active-link"
-                    [routerLinkActiveOptions]="{ exact: true }"
-                    >Destinations</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    routerLink="/Experiences"
-                    routerLinkActive="active-link"
-                    [routerLinkActiveOptions]="{ exact: true }"
-                    >Experiences</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    routerLink="/Tours"
-                    routerLinkActive="active-link"
-                    [routerLinkActiveOptions]="{ exact: true }"
-                    >Tours</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    routerLink="/Contact"
-                    routerLinkActive="active-link"
-                    [routerLinkActiveOptions]="{ exact: true }"
-                    >Contact Us</a
-                  >
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
+        <div class="d-flex flex-row justify-content-end pe-3">
+          <ul class="navbar-nav d-flex flex-row">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                routerLink="/Home"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                routerLink="/About"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                routerLink="/Destinations"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Destinations</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                routerLink="/Experiences"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Experiences</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                routerLink="/Tours"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Tours</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                routerLink="/Contact"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="d-flex col-md-8 align-items-center justify-content-end side-btn"
+        *ngIf="isMobile"
+      >
+        <button mat-icon-button (click)="sideNav()">
+          <mat-icon>menu</mat-icon>
+        </button>
       </div>
     </div>
   </div>
 </nav>
-<!-- Side Navbar -->
 <div id="sideNavbar" class="sidenav" [class.active]="isSideNavOpen">
   <button class="closebtn" (click)="closeSideNav()">&times;</button>
   <a routerLink="/Home" (click)="closeSideNav()">Home</a>
