@@ -2,3 +2,21 @@
   text-align: justify;
   text-justify: inter-word;
 }
+
+.title-desc {
+  width: 50%;
+}
+
+p {
+  font-family: "Arimo", sans-serif;
+}
+
+@media only screen and (max-width: 426px) {
+  .title-desc {
+    width: 100%;
+  }
+
+  .tour-header {
+    text-align: center;
+  }
+}

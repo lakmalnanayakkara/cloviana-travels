@@ -10,3 +10,16 @@
   background-repeat: no-repeat;
   padding-top: 50px;
 }
+
+.about-subtitle {
+  font-family: "Playball", cursive;
+}
+
+p {
+  font-family: "Arimo", sans-serif;
+  color: #777;
+}
+
+h4 {
+  font-family: "Arimo", sans-serif;
+}

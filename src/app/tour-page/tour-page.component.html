@@ -62,10 +62,15 @@
       class="d-flex flex-row mt-3"
       [ngStyle]="{ 'background-color': i % 2 === 0 ? '#5ab1bb' : '#a5c983' }"
     >
-      <div class="col-md-8 align-items-center">
-        <h4>Day 0{{ i + 1 }} | {{ itinerary.details }}</h4>
+      <div
+        class="d-flex col-8 col-md-8 align-items-center justify-content-start ps-3"
+      >
+        <h4>
+          <span class="fw-bolder">Day 0{{ i + 1 }}</span> |
+          {{ itinerary.details }}
+        </h4>
       </div>
-      <div class="col-md-4">
+      <div class="d-flex col-4 col-md-4 align-items-center justify-content-end">
         <img src="../../assets/home/Arrow.png" class="w-25" />
       </div>
     </div>

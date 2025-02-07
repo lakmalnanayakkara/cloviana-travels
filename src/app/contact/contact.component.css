@@ -21,3 +21,17 @@
 .mat-mdc-form-field-focus-overlay {
   background-color: transparent !important;
 }
+
+.contact-title {
+  font-family: "Playball", cursive;
+  font-weight: bolder;
+}
+
+.contact-subtitle {
+  font-family: "Arimo", sans-serif;
+  font-weight: bolder;
+}
+
+h4 {
+  text-align: center;
+}

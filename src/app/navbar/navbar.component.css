@@ -117,3 +117,13 @@
     font-size: 20px;
   }
 }
+
+.active-link {
+  color: #a5c983 !important; /* Change the color to your preference */
+  border-bottom: 2px solid #a5c983; /* Adds an underline */
+}
+
+.active {
+  color: #a5c983 !important; /* Change the color to your preference */
+  border-bottom: 2px solid #a5c983; /* Adds an underline */
+}
