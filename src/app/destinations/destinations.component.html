@@ -16,21 +16,15 @@
 
 <!-- hero -->
 <section id="about-home">
-  <h2>Blog</h2>
+  <h2>Sri Lanka Destinations</h2>
   <p>
-    With myriad places to visit, Sri Lanka is a little paradise isle full of
-    surprising variety. You can swap the chaos of a city for a tranquil beach in
-    an hour or less, or switch from tropical heat to cool heights and cloud
-    forests for a few more. There are mountains to climb, waves to surf, whales
-    to watch, history to revisit, jungles to explore, even elephants to meet.
-    The destinations in Sri Lanka are wide and varied and we’ll gladly share
-    them with you in the very best way.
+    Sri Lanka is a land of diverse landscapes, rich history, and breathtaking natural beauty. From golden beaches to misty mountains, ancient cities to vibrant cultural hubs, the island offers an unforgettable journey for every traveler. Whether you seek adventure, relaxation, or a deep dive into history, Sri Lanka’s destinations provide a perfect blend of experiences. Explore lush jungles, witness magnificent wildlife, wander through centuries-old ruins, and embrace the warmth of its people. Let us take you on an extraordinary journey through the island’s most captivating destinations.
   </p>
 </section>
 
 <section id="blog-container">
   <div class="blogs">
-    <div class="post">
+    <!-- <div class="post">
       <ul>
         <li *ngFor="let destination of destinations">
           <img src="{{ destination.imageUrl }}" alt="" />
@@ -52,7 +46,30 @@
           </button>
         </li>
       </ul>
+    </div> -->
+ 
+    <div class="post">
+      <div class="post-grid">
+        <mat-card *ngFor="let destination of destinations" class="blog-card">
+          <img mat-card-image src="{{ destination.imageUrl }}" alt="Destination" />
+          <mat-card-content>
+            <h3>{{ destination.header }}</h3>
+            <p>{{ destination.description }}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button
+              routerLink="/Destinations/{{ destination.header }}"
+              mat-button
+              class="custom-btn"
+            >
+              Read more
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
     </div>
+    
+ 
   </div>
 
   <div class="cate">
