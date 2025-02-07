@@ -1,30 +1,19 @@
-<div
-  id="carouselExampleSlidesOnly"
-  class="carousel slide"
-  data-bs-ride="carousel"
->
-  <div class="carousel-inner">
-    <!-- <div class="carousel-item active">
-      <img
-        src="../../assets/home/ella-bridge.jpg"
-        class="d-block w-100"
-        alt="..."
+<div class="container-fluid p-0 overflow-hidden">
+  <div class="d-flex flex-row w-100 video-container">
+    <video
+      #videoPlayer
+      autoplay
+      muted
+      loop
+      preload="auto"
+      playsinline
+      class="d-block w-100"
+    >
+      <source
+        src="../../assets/home/Sri Lanka Tourism -  Nature (CNN Campaign 2018 ).mp4"
+        type="video/mp4"
       />
-    </div> -->
-    <div class="carousel-item active">
-      <img
-        src="../../assets/home/sigiriya.jpg"
-        class="d-block w-100"
-        alt="..."
-      />
-    </div>
-    <div class="carousel-item">
-      <img
-        src="../../assets/home/unawatuna.jpg"
-        class="d-block w-100"
-        alt="..."
-      />
-    </div>
+    </video>
   </div>
 </div>
 <div class="container-fluid mt-5 px-0">
@@ -129,18 +118,6 @@
     </div>
     <div class="col-2" style="background-color: #5ab1bb"></div>
   </div>
-
-  <!--============== Vedio BAckground Start ===============-->
-
-  <section id="costa-victoria">
-    <div class="video-bg">
-      <video #videoPlayer autoplay muted loop preload="auto" playsinline>
-        <source src="../../assets/home/Sri Lanka Tourism -  Nature (CNN Campaign 2018 ).mp4" type="video/mp4" />
-      </video>
-    </div>
-  </section>
-
-  <!--============== Vedio BAckground Close ===============-->
   <div class="row mt-4">
     <div
       class="d-flex flex-column align-items-center justify-content-center text-center"
@@ -174,186 +151,59 @@
     </div>
   </div>
 </div>
-<!-- <div
-  id="carouselExampleSlidesOnly"
-  class="carousel slide mt-5"
-  data-bs-ride="carousel"
->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
- 
-
-
-      <p class="heading-normal-txt review">TRAVEL BLOG</p>
-      <h2 class="headings">TRAVEL EXPERIENCE</h2>
-      <div class="testimonials-wrapper swiper4">
-        <div class="swiper-wrapper">
-          <div class="testimonials-content swiper-slide">
-            <p class="lead">
-              <i class="fa-solid fa-quote-left"></i>
-              Lorem ipsum dolor sit amet consectetur adipisicing eLit. Tempore
-              qui sit Odio voluptatibus cupiditate ex aut! Debitis architecto
-              vitae autem quasi, impedit ad earum sunt ea sed provident Libero
-              aperiam, nero fugit voluptates porro quaerat alias nulla
-              reprehenderit tempore explicabo.
-
-              <i class="fa-solid fa-quote-right"></i>
-            </p>
-            
-            <div class="test-img">
-              <img src=" ../../src/assets/home/profile.jpg"
-              alt="">
+<div class="container-fluid p-0" class="reviews">
+  <div class="blog-section d-flex flex-column w-100 h-100">
+    <div class="w-100 review-set">
+      <div
+        class="d-flex flex-column justify-content-center text-center review-title"
+      >
+        <h1 class="fw-bold home-title mt-5">TRAVEL BLOG</h1>
+        <h4 class="fw-semibold home-subtitle">Travel Experience</h4>
+      </div>
+      <div
+        id="reviewCarousel"
+        class="carousel slide mt-5"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div
+            *ngFor="let review of reviewList; let i = index"
+            class="carousel-item"
+            [class.active]="i === 0"
+          >
+            <div class="d-flex justify-content-center align-items-center">
+              <div
+                class="d-flex flex-column gap-3 align-items-center justify-content-center text-center mb-5"
+              >
+                <img
+                  src="../../assets/home/profile.jpg"
+                  alt=""
+                  class="profile-img d-flex"
+                />
+                <h5>{{ review.name || "No name provided" }}</h5>
+                <p>{{ review.review || "No review provided" }}</p>
+                <p>⭐ Rating: {{ review.ratings }}/5</p>
+              </div>
             </div>
-
-            <div class="iconss">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <p>Emaily</p>
-              <p class="guest">Guest Review</p>
-            </div>
-
-          </div>
-          <div class="testimonials-content swiper-slide">
-            <p class="lead">
-              <i class="fa-solid fa-quote-left"></i>
-              Lorem ipsum dolor sit amet consectetur adipisicing eLit. Tempore
-              qui sit Odio voluptatibus cupiditate ex aut! Debitis architecto
-              vitae autem quasi, impedit ad earum sunt ea sed provident Libero
-              aperiam, nero fugit voluptates porro quaerat alias nulla
-              reprehenderit tempore explicabo.
-
-              <i class="fa-solid fa-quote-right"></i>
-            </p>
-
-            <div class="test-img">
-              <img src=" ../../src/assets/home/profile.jpg"
-              alt="">
-            </div>
-
-            <div class="iconss">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <p>Nolan White</p>
-              <p class="guest">Guest Review</p>
-            </div>
-
-          </div>
-          <div class="testimonials-content swiper-slide">
-            <p class="lead">
-              <i class="fa-solid fa-quote-left"></i>
-              Lorem ipsum dolor sit amet consectetur adipisicing eLit. Tempore
-              qui sit Odio voluptatibus cupiditate ex aut! Debitis architecto
-              vitae autem quasi, impedit ad earum sunt ea sed provident Libero
-              aperiam, nero fugit voluptates porro quaerat alias nulla
-              reprehenderit tempore explicabo.
-
-              <i class="fa-solid fa-quote-right"></i>
-            </p>
-
-            <div class="test-img">
-              <img src=" ../../src/assets/home/profile.jpg"
-              alt="">
-            </div>
-
-            <div class="iconss">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <p>COLA</p>
-              <p class="guest">Guest Review</p>
-            </div>
-
           </div>
         </div>
-      </div>
-
-    </div>
-  </div>
-</div> -->
-<section id="testimonials">
-  <p class="heading-normal-txt review">TRAVEL BLOG</p>
-  <h2 class="headings">TRAVEL EXPERIENCE</h2>
-  <div class="testimonials-wrapper swiper4">
-    <div class="swiper-wrapper">
-      <div class="testimonials-content swiper-slide">
-        <p class="lead">
-          <i class="fa-solid fa-quote-left"></i>
-          Lorem ipsum dolor sit amet consectetur adipisicing eLit. Tempore
-          <i class="fa-solid fa-quote-right"></i>
-        </p>
-
-        <div class="test-img">
-          <img src="../../assets/home/profile.jpg" alt="">
-        </div>
-
-        <div class="iconss">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <p>Emaily</p>
-          <p class="guest">Guest Review</p>
-        </div>
-
-      </div>
-      <div class="testimonials-content swiper-slide">
-        <p class="lead">
-          <i class="fa-solid fa-quote-left"></i>
-          Lorem ipsum dolor sit amet consectetur adipisicing eLit. Tempore
-          qui sit Odio voluptatibus cupiditate ex aut! Debitis architecto
-   
-
-          <i class="fa-solid fa-quote-right"></i>
-        </p>
-
-        <div class="test-img">
-          <img src="../../assets/home/profile.jpg" alt="">
-        </div>
-
-        <div class="iconss">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <p>Nolan White</p>
-          <p class="guest">Guest Review</p>
-        </div>
-
-      </div>
-      <div class="testimonials-content swiper-slide">
-        <p class="lead">
-          <i class="fa-solid fa-quote-left"></i>
-          Lorem ipsum dolor sit amet consectetur adipisicing eLit. Tempore
-          qui sit Odio 
-
-          <i class="fa-solid fa-quote-right"></i>
-        </p>
-
-        <div class="test-img">
-          <img src="../../assets/home/profile.jpg" alt="">
-        </div>
-
-        <div class="iconss">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <p>COLA</p>
-          <p class="guest">Guest Review</p>
-        </div>
-
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#reviewCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#reviewCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
       </div>
     </div>
   </div>
-</section>
+</div>
