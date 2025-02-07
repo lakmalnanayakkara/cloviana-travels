@@ -21,6 +21,7 @@ import { TourPageComponent } from './tour-page/tour-page.component';
 import { TourPackageComponent } from './tours/tour-package/tour-package.component';
 import { DestinationDescriptionComponent } from './destination-description/destination-description.component';
 import { CommonModule } from '@angular/common';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { CommonModule } from '@angular/common';
     MatNativeDateModule,
     FormsModule,
     CommonModule,
+    CarouselModule,
   ],
   exports: [ReactiveFormsModule],
   providers: [provideAnimationsAsync()],

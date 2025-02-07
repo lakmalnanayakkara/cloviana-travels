@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { Tour } from '../shared/models/tours';
 import { ActivatedRoute } from '@angular/router';
 import { ToursService } from '../services/tours/tours.service';
@@ -15,6 +15,7 @@ export class TourPageComponent {
   tour!: Tour;
   expandedIndex: number | null = null;
   safeIframeUrl: SafeResourceUrl;
+  readonly panelOpenState = signal(false);
 
   constructor(
     private activatedRoute: ActivatedRoute,
