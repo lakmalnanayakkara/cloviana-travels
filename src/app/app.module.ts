@@ -19,6 +19,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { TourPageComponent } from './tour-page/tour-page.component';
 import { TourPackageComponent } from './tours/tour-package/tour-package.component';
+import { DestinationDescriptionComponent } from './destination-description/destination-description.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { TourPackageComponent } from './tours/tour-package/tour-package.componen
     ContactComponent,
     ExperiencesComponent,
     DestinationsComponent,
+    DestinationDescriptionComponent,
     ToursComponent,
     FooterComponent,
     SidenavComponent,
@@ -43,6 +46,7 @@ import { TourPackageComponent } from './tours/tour-package/tour-package.componen
     MatDatepickerModule,
     MatNativeDateModule,
     FormsModule,
+    CommonModule,
   ],
   exports: [ReactiveFormsModule],
   providers: [provideAnimationsAsync()],

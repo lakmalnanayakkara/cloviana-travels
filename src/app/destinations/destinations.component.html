@@ -1,1 +1,108 @@
-<p>destinations works!</p>
+<div
+  id="carouselExampleSlidesOnly"
+  class="carousel slide"
+  data-bs-ride="carousel"
+>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img
+        src="../../assets/destinations/colombo-cover-1600x900.webp"
+        class="d-block w-100"
+        alt="..."
+      />
+    </div>
+  </div>
+</div>
+
+<!-- hero -->
+<section id="about-home">
+  <h2>Sri Lanka Destinations</h2>
+  <p>
+    Sri Lanka is a land of diverse landscapes, rich history, and breathtaking natural beauty. From golden beaches to misty mountains, ancient cities to vibrant cultural hubs, the island offers an unforgettable journey for every traveler. Whether you seek adventure, relaxation, or a deep dive into history, Sri Lanka’s destinations provide a perfect blend of experiences. Explore lush jungles, witness magnificent wildlife, wander through centuries-old ruins, and embrace the warmth of its people. Let us take you on an extraordinary journey through the island’s most captivating destinations.
+  </p>
+</section>
+
+<section id="blog-container">
+  <div class="blogs">
+    <!-- <div class="post">
+      <ul>
+        <li *ngFor="let destination of destinations">
+          <img src="{{ destination.imageUrl }}" alt="" />
+          <div class="post_header">
+            <h3>
+              {{ destination.header }}
+            </h3>
+          </div>
+          <div class="post_description">
+            <p>{{ destination.description }}</p>
+          </div>
+
+          <button
+            routerLink="/Destinations/{{ destination.header }}"
+            mat-button
+            class="green-btn"
+          >
+            Click Me
+          </button>
+        </li>
+      </ul>
+    </div> -->
+ 
+    <div class="post">
+      <div class="post-grid">
+        <mat-card *ngFor="let destination of destinations" class="blog-card">
+          <img mat-card-image src="{{ destination.imageUrl }}" alt="Destination" />
+          <mat-card-content>
+            <h3>{{ destination.header }}</h3>
+            <p>{{ destination.description }}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button
+              routerLink="/Destinations/{{ destination.header }}"
+              mat-button
+              class="custom-btn"
+            >
+              Read more
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+    
+ 
+  </div>
+
+  <div class="cate">
+    <h2>Categories</h2>
+    <hr />
+    <a href="#" style="color: #a5c983">Western Province</a>
+    <hr />
+    <a href="#" style="color: #5ab1bb">Southern Province</a>
+    <hr />
+    <a href="#" style="color: #a5c983">Central Province</a>
+    <hr />
+    <a href="#" style="color: #5ab1bb">North-Western Province</a>
+    <hr />
+    <a href="#" style="color: #a5c983">Sabaragamuwa Province</a>
+    <hr />
+    <a href="#" style="color: #5ab1bb">Northern Province</a>
+    <hr />
+  </div>
+</section>
+
+<!-- blog container -->
+
+<!-- footer -->
+
+<!-- <script>
+
+
+// Navaigation Bar
+$('#menu-btn').click(function(){
+    $('nav .navigation ul').addClass('active')
+});
+$('#menu-close').click(function(){
+    $('nav .navigation ul').removeClass('active')
+});
+
+        </script> -->

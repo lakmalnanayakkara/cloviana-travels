@@ -72,3 +72,140 @@
   font-family: "Arimo", sans-serif;
   font-weight: bolder;
 }
+
+.equal-box-2 p {
+  font-family: "Arimo", sans-serif;
+}
+
+.home-title {
+  font-family: "Playball", cursive;
+  font-weight: bolder;
+}
+
+.home-title p {
+  font-family: "Arimo", sans-serif;
+  color: #777;
+  font-weight: normal;
+}
+
+.home-subtitle {
+  font-family: "Arimo", sans-serif;
+  font-weight: bolder;
+}
+
+
+
+/*<!--============== Vedio BAckground Start ===============-->*/
+ #costa-victoria {
+  padding: 6rem 0;
+  position: relative;
+}
+
+#costa-victoria video {
+  position: relative;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  max-height: 650px;
+}
+
+.video-bg {
+  position: relative;
+} 
+.video-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+@media(max-width: 900px){
+    /*vedio*/
+
+    #costa-victoria{
+      padding: 2rem 0;
+      position: relative;
+  }
+
+  .travel-countries-wrapper{
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      width: 100%;
+      grid-gap: 2rem;
+  }
+}
+/*<!--============== Vedio BAckground Close ===============-->*/
+
+/*<!--============== Testimonials Start ===============-->*/
+/*============== Testimonials Section ==============*/
+#testimonials {
+  padding: 6rem 0;
+  width: 100%;
+  background: url("../../assets/home/sigiriya.jpg") no-repeat center center/cover;
+  background-attachment: fixed;
+
+}
+
+/* Headings inside Testimonials */
+#testimonials .headings {
+  color: #16b882;
+}
+
+/* Wrapper for Testimonials */
+.testimonials-wrapper {
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.8);
+  color: #968b8b;
+  padding: 2rem 6rem;
+
+}
+
+.testimonials-wrapper i {
+  color: #34a9ec;
+}
+
+/* Styling for review text */
+/* .review {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+} */
+
+/* Paragraphs inside Testimonials */
+.testimonials-wrapper p {
+  text-align: center;
+
+}
+
+/* Testimonial Images */
+.test-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.test-img img {
+  width: 10%;
+  object-fit: cover;
+  margin: 1rem 0;
+}
+
+/* Icons Section */
+.iconss {
+  text-align: center;
+}
+
+
+
+/* Guest Review Text */
+.guest {
+  font-size: 0.75rem;
+}
+
+/*<!--============== Testimonials Close ===============-->*/

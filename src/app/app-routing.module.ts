@@ -6,6 +6,8 @@ import { ContactComponent } from './contact/contact.component';
 import { ExperiencesComponent } from './experiences/experiences.component';
 import { ToursComponent } from './tours/tours.component';
 import { TourPageComponent } from './tour-page/tour-page.component';
+import { DestinationsComponent } from './destinations/destinations.component';
+import { DestinationDescriptionComponent } from './destination-description/destination-description.component';
 const routes: Routes = [
   {
     path: '',
@@ -36,6 +38,16 @@ const routes: Routes = [
     path: 'Privacy-Policy',
     component: HomeComponent,
     data: { title: 'Cloviana Travels | Privacy Policy' },
+  },
+  {
+    path: 'Destinations',
+    component: DestinationsComponent,
+    data: { title: 'Cloviana Destinations | Destination' },
+  },
+  {
+    path: 'Destinations/:name',
+    component: DestinationDescriptionComponent,
+    data: { title: 'Cloviana Destinations page | Destinations' },
   },
   {
     path: 'Tours',

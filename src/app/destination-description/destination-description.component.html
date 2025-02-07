@@ -1,0 +1,36 @@
+<div
+  id="carouselExampleSlidesOnly"
+  class="carousel slide"
+  data-bs-ride="carousel"
+>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img
+        src="../../assets/home/ella-bridge.jpg"
+        class="d-block w-100"
+        alt="..."
+      />
+    </div>
+  </div>
+</div>
+
+<section id="blog-container">
+  <div class="blogs blogpost">
+    <div class="post">
+      <div class="single-blog" *ngFor="let post of destination.blog">
+       <div class="image">
+        <img src="{{ post.imageUrl }}" alt="" />
+      </div>
+        <div class="header">
+          <h3>{{ post.headerr }}</h3>
+        </div>
+        <div class="description">
+          <p>{{ post.description}}</p>
+        </div>
+      </div>
+      <button routerLink="/Destinations" mat-button class="green-btn">
+        Back
+      </button>
+    </div>
+  </div>
+</section>
